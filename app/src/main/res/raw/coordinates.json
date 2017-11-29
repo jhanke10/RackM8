@@ -1,0 +1,89 @@
+{
+  "features":
+  [
+    {
+      "id": 0,
+      "name": "Digital Computer Lab (Northeast)",
+      "rating": "3.2/5.0",
+      "longitude": -88.22579383850098,
+      "latitude": 40.113440475933125
+    },
+    {
+      "id": 1,
+      "name": "Kenney Gym Annex",
+      "rating": "2.9/5.0",
+      "longitude": -88.22487115859985,
+      "latitude": 40.113522526833314
+    },
+    {
+      "id": 2,
+      "name": "Grainger Engineering Library (West)",
+      "rating": "3.1/5.0",
+      "longitude": -88.22791278362274,
+      "latitude": 40.11235739477313
+    },
+    {
+      "id": 3,
+      "name": "Grainger Engineering Library (East)",
+      "rating": "3.3/5.0",
+      "longitude": -88.22577774524689,
+      "latitude": 40.112390215667745
+    },
+    {
+      "id": 4,
+      "name": "Talbot Laboratory (East)",
+      "rating": "2.7/5.0",
+      "longitude": -88.22780549526213,
+      "latitude": 40.11196354280209
+    },
+    {
+      "id": 5,
+      "name": "Everitt Laboratory (South)",
+      "rating": "3.3/5.0",
+      "longitude": -88.22859406471252,
+      "latitude": 40.11062196741002
+    },
+    {
+      "id": 6,
+      "name": "Engineering Hall (West)",
+      "rating": "4.1/5.0",
+      "longitude": -88.22753727436066,
+      "latitude": 40.110798384033835
+    },
+    {
+      "id": 7,
+      "name": "Materials Science and Engineering Building (East)",
+      "rating": "3.2/5.0",
+      "longitude": -88.22568655014038,
+      "latitude": 40.110843513794336
+    },
+    {
+      "id": 8,
+      "name": "Mechanical Engineering Building (West)",
+      "rating": "3.5/5.0",
+      "longitude": -88.225437104702,
+      "latitude": 40.110849667850275
+    },
+    {
+      "id": 9,
+      "name": "Transportation Building (West)",
+      "rating": "3.8/5.0",
+      "longitude": -88.22548538446426,
+      "latitude": 40.11150609728538
+    },
+    {
+      "id": 10,
+      "name": "University Liboratory High School (North)",
+      "rating": "3.2/5.0",
+      "longitude": -88.22534859180449,
+      "latitude": 40.11343227083767
+    },
+    {
+      "id": 11,
+      "name": "Mechanical Engineering Laboratory (East)",
+      "rating": "3.8/5.0",
+      "longitude": -88.22572410106659,
+      "latitude": 40.11172558946436
+    }
+  ]
+}
