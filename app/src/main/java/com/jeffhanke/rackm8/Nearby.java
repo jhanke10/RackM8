@@ -18,11 +18,11 @@ import java.util.Arrays;
 
 public class Nearby extends Fragment {
 
-    String[] locationArrayDist = {"Digital Computer Laboratory\n0.1mi","Kenney Gym Annex\n0.1mi",
-            "Grainger Engineering Library\n0.2mi","Talbot Laboratory\n0.2mi", "Everitt Laboratory\n0.3mi",
-            "Engineering Hall\n0.3mi","Materials Science and Engineering Building\n0.4mi",
-            "Mechanical Engineering Building\n0.4mi","Transportation Building\n0.5mi",
-            "University Laboratory High School\n0.5mi","Mechanical Engineering Laboratory\n0.5mi"};
+    String[] locationArrayDist = {"Digital Computer Laboratory\n0.1 mi","Kenney Gym Annex\n0.1 mi",
+            "Grainger Engineering Library\n0.2 mi","Talbot Laboratory\n0.2mi", "Everitt Laboratory\n0.3 mi",
+            "Engineering Hall\n0.3 mi","Materials Science and Engineering Building\n0.4 mi",
+            "Mechanical Engineering Building\n0.4 mi","Transportation Building\n0.5 mi",
+            "University Laboratory High School\n0.5 mi","Mechanical Engineering Laboratory\n0.5 mi"};
 
     String[] locationArraySafe = {
             "Engineering Hall\nRating: 4.1/5.0",
