@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jeffhanke.rackm8.Nearby">
+    android:orientation="vertical">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="start"
-        android:orientation="vertical"
-        tools:context=".ListActivity" >
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/distance"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Distance"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:textSize="15dip"
+                android:layout_marginRight="0dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="20dp"
+                />
+
+            <Button
+                android:id="@+id/safety"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Safety"
+                android:textAllCaps="false"
+                android:textSize="15dip"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="0dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="20dp"
+                />
+
+        </LinearLayout>
 
         <ListView
-            android:id="@+id/location_list"
+            android:id="@+id/location_list2"
             android:layout_width="match_parent"
-            android:layout_height="450dp" >
+            android:layout_height="match_parent" >
         </ListView>
 
     </LinearLayout>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_gravity="start"
-        app:menu="@menu/bottom_nav_items" />
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_home"
+        android:id="@+id/menu_search"
         android:title="@string/menu_search"
         android:icon="@drawable/search"
         />
 
     <item
-        android:id="@+id/menu_search"
+        android:id="@+id/menu_nearby"
         android:title="@string/menu_nearby"
         android:icon="@drawable/nearby"
         />
 
     <item
-        android:id="@+id/menu_notifications"
+        android:id="@+id/menu_map"
         android:title="@string/menu_map"
         android:icon="@drawable/map"
         />

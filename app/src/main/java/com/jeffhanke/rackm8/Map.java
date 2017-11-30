@@ -1,7 +1,10 @@
 package com.jeffhanke.rackm8;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -9,6 +12,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -19,17 +23,29 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Map extends FragmentActivity implements OnMapReadyCallback {
+public class Map extends Fragment implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
+    public static Map newInstance() {
+        Map fragment = new Map();
+        return fragment;
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_map, container, false);
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        if (mapFragment != null) {
+            mapFragment.getMapAsync(this);
+        }
+        return view;
     }
 
     @Override
@@ -37,6 +53,8 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         LatLng current = new LatLng(40.111763, -88.227049);
+        LatLngBounds bounds = new LatLngBounds(new LatLng(40.1115010, -88.2274984), new LatLng(40.111977, -88.226796));
+        mMap.setLatLngBoundsForCameraTarget(bounds);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(current, 17));
         mMap.addMarker(new MarkerOptions().position(current).title("Current Location").snippet("Hi! What is up"));
 
