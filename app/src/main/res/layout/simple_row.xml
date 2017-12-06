@@ -3,6 +3,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="20dip"
-    android:textSize="15dip"
+    android:textSize="18dip"
     android:textStyle="bold" >
 </TextView>

@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
                                 selectedFragment = Building.newInstance();
                                 x = 0;
                                 break;
-                            case R.id.menu_nearby:
-                                selectedFragment = Nearby.newInstance();
-                                x = 1;
-                                break;
                             case R.id.menu_map:
                                 selectedFragment = Map.newInstance();
+                                x = 1;
+                                break;
+                            case R.id.menu_nearby:
+                                selectedFragment = Nearby.newInstance();
                                 x = 2;
                                 break;
                         }
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Manually displaying the first fragment - one time only
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, Nearby.newInstance());
+        transaction.replace(R.id.container, Map.newInstance());
         transaction.commit();
 
         //Used to select an item programmatically

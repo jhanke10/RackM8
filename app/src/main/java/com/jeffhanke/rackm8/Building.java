@@ -47,7 +47,7 @@ public class Building extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.container, Map.newInstance());
                 transaction.commit();
-                mBottomNav.getMenu().getItem(2).setChecked(true);
+                mBottomNav.getMenu().getItem(1).setChecked(true);
             }
         });
 

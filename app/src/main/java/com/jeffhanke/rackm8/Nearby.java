@@ -18,24 +18,31 @@ import java.util.Arrays;
 
 public class Nearby extends Fragment {
 
-    String[] locationArrayDist = {"Digital Computer Laboratory\n0.1 mi","Kenney Gym Annex\n0.1 mi",
-            "Grainger Engineering Library\n0.2 mi","Talbot Laboratory\n0.2mi", "Everitt Laboratory\n0.3 mi",
-            "Engineering Hall\n0.3 mi","Materials Science and Engineering Building\n0.4 mi",
-            "Mechanical Engineering Building\n0.4 mi","Transportation Building\n0.5 mi",
-            "University Laboratory High School\n0.5 mi","Mechanical Engineering Laboratory\n0.5 mi"};
+    String[] locationArrayDist = {
+            "Digital Computer Laboratory\nDistance: 0.1 mi\nRating: ⭐⭐⭐",
+            "Kenney Gym Annex\nDistance: 0.1 mi\nRating: ⭐⭐",
+            "Grainger Engineering Library\nDistance: 0.2 mi\nRating: ⭐⭐",
+            "Talbot Laboratory\nDistance: 0.2 mi\nRating: ⭐",
+            "Everitt Laboratory\nDistance: 0.3 mi\nRating: ⭐⭐⭐",
+            "Engineering Hall\nDistance: 0.3 mi\nRating: ⭐⭐⭐⭐⭐",
+            "Materials Science and Engineering Building\nDistance: 0.4 mi\nRating: ⭐⭐⭐",
+            "Mechanical Engineering Building\nDistance: 0.4 mi\nRating: ⭐⭐⭐",
+            "Transportation Building\nDistance: 0.5 mi\nRating: ⭐⭐⭐⭐",
+            "University Laboratory High School\nDistance: 0.5 mi\nRating: ⭐⭐⭐",
+            "Mechanical Engineering Laboratory\nDistance: 0.5 mi\nRating: ⭐⭐⭐⭐"};
 
     String[] locationArraySafe = {
-            "Engineering Hall\nRating: 4.1/5.0",
-            "Mechanical Engineering Laboratory\nRating: 3.8/5.0",
-            "Transportation Building\nRating: 3.8/5.0",
-            "Mechanical Engineering Building\nRating: 3.5/5.0",
-            "Everitt Laboratory\nRating: 3.3/5.0",
-            "University Laboratory High School\nRating: 3.2/5.0",
-            "Materials Science and Engineering Building\nRating: 3.2/5.0",
-            "Digital Computer Laboratory\nRating: 3.2/5.0",
-            "Grainger Engineering Library\nRating: 3.1/5.0",
-            "Kenney Gym Annex\nRating: 2.9/5.0",
-            "Talbot Laboratory\nRating: 2.7/5.0"};
+            "Engineering Hall\nDistance: 0.3 mi\nRating: ⭐⭐⭐⭐⭐",
+            "Mechanical Engineering Laboratory\nDistance: 0.5 mi\nRating: ⭐⭐⭐⭐",
+            "Transportation Building\nDistance: 0.5 mi\nRating: ⭐⭐⭐⭐",
+            "Mechanical Engineering Building\nDistance: 0.4 mi\nRating: ⭐⭐⭐",
+            "Everitt Laboratory\nDistance: 0.3 mi\nRating: ⭐⭐⭐",
+            "University Laboratory High School\nDistance: 0.5 mi\nRating: ⭐⭐⭐",
+            "Materials Science and Engineering Building\nDistance: 0.4 mi\nRating: ⭐⭐⭐",
+            "Digital Computer Laboratory\nDistance: 0.1 mi\nRating: ⭐⭐⭐",
+            "Grainger Engineering Library\nDistance: 0.2 mi\nRating: ⭐⭐",
+            "Kenney Gym Annex\nDistance: 0.1 mi\nRating: ⭐⭐",
+            "Talbot Laboratory\nDistance: 0.2 mi\nRating: ⭐"};
 
     public static Nearby newInstance() {
         Nearby fragment = new Nearby();
@@ -67,7 +74,7 @@ public class Nearby extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.container, Map.newInstance());
                 transaction.commit();
-                mBottomNav.getMenu().getItem(2).setChecked(true);
+                mBottomNav.getMenu().getItem(1).setChecked(true);
             }
         });
 
