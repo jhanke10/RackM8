@@ -45,6 +45,7 @@ public class Map extends Fragment implements OnMapReadyCallback {
     private View view;
     private Boolean parking;
     private String curr_park;
+    private Boolean rated;
 
     public static Map newInstance() {
         Map fragment = new Map();
@@ -55,6 +56,7 @@ public class Map extends Fragment implements OnMapReadyCallback {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         parking = false;
+        rated = false;
         curr_park = "";
     }
 
@@ -105,8 +107,10 @@ public class Map extends Fragment implements OnMapReadyCallback {
                         park.setText("Park");
                     } else {
                         park.setText("Leave");
-                        rate.setEnabled(true);
-                        line.setEnabled(true);
+                        if(!rated) {
+                            rate.setEnabled(true);
+                            line.setEnabled(true);
+                        }
                     }
 
                     line.addTextChangedListener(new TextWatcher() {
@@ -165,6 +169,7 @@ public class Map extends Fragment implements OnMapReadyCallback {
                             if(!line.getText().toString().equalsIgnoreCase("")) {
                                 Toast.makeText(getActivity(), "Added Rating", Toast.LENGTH_SHORT).show();
                                 line.setText("");
+                                rated = true;
                                 line.setEnabled(false);
                                 rate.setEnabled(false);
                             }
